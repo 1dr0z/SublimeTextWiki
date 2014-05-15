@@ -1,5 +1,5 @@
 import sublime, sublime_plugin, os
-import WikiLinks.drivers as drivers
+from . import drivers
 
 class WikiLinkCommand(sublime_plugin.TextCommand):
 

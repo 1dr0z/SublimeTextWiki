@@ -1,6 +1,5 @@
-from WikiLinks.drivers import wikilinks
+from . import wikilinks
 import os, re, sublime
-from pprint import pprint
 
 class Link(wikilinks.Link):
 

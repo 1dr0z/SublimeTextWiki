@@ -1,1 +1,1 @@
-from WikiLinks.drivers import markdown, wikilinks
+from . import markdown, wikilinks

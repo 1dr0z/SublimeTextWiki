@@ -1,5 +1,4 @@
 import sublime, os, re
-from pprint import pprint
 
 class Link():
 
@@ -50,7 +49,6 @@ class Link():
       if path and not os.path.exists(basedir):
         os.makedirs(basedir)
 
-      pprint(os.path.join(folders[0], self.name))
       with open(os.path.join(folders[0], self.name), 'a') as target:
         view    = self.window.open_file(self.name)
         sublime.status_message('Creating {file} on disk'.format(file=self.name))
