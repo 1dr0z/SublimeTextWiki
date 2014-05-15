@@ -63,3 +63,5 @@ class Link(wikilinks.Link):
       for region, symbol in symbols:
         if symbol.strip(' #').lower() == heading.lower():
           view.show(region)
+          view.sel().clear()
+          view.sel().add(region)
