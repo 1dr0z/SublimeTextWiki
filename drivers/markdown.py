@@ -59,9 +59,10 @@ class Link(wikilinks.Link):
       # Wait for view to finish loading (async)
       sublime.set_timeout(lambda: self._open_heading(view, heading), 100)
     else:
-      symbols = view.indexed_symbols() # markdown headings
+      # Support markdown headings if they are converted to symbols
+      symbols = view.symbols()
       for region, symbol in symbols:
-        if symbol.strip(' #').lower() == heading.lower():
+        if symbol.strip() == heading:
           view.show(region)
           view.sel().clear()
           view.sel().add(region)
